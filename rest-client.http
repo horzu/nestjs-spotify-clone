@@ -1,0 +1,25 @@
+### Entry point of api
+GET http://localhost:3000/
+
+### Fetch all songs
+GET http://localhost:3000/songs
+
+### Fetch one song by id
+GET http://localhost:3000/songs/1
+
+### Create new song
+POST http://localhost:3000/songs/
+Content-Type: application/json
+
+{
+    "title": "Mr. Lonely",
+    "artists": [123123],
+    "releaseDate": "2022-09-11",
+    "duration": "02:23"
+}
+
+### Update one song by id
+PUT http://localhost:3000/songs/1
+
+### Deşete one song by id
+DELETE  http://localhost:3000/songs/1
