@@ -4,6 +4,12 @@ import { Song } from './song.entity';
 import { DeleteResult, Repository, UpdateResult } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { UpdateSongDto } from './dto/update-song.dto';
+import {
+  paginate,
+  Paginated,
+  PaginateQuery,
+  PaginateConfig,
+} from 'nestjs-paginate';
 
 @Injectable()
 export class SongsService {
@@ -35,5 +41,12 @@ export class SongsService {
 
   update(id: number, recordToUpdate: UpdateSongDto): Promise<UpdateResult> {
     return this.songsRepository.update(id, recordToUpdate);
+  }
+
+  async paginate(options: PaginateQuery): Promise<Paginated<Song>> {
+    const config: PaginateConfig<Song> = {
+      sortableColumns: ['releaseDate'],
+    };
+    return paginate(options, this.songsRepository, config);
   }
 }

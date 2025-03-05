@@ -12,7 +12,7 @@ POST http://localhost:3000/songs/
 Content-Type: application/json
 
 {
-    "title": "Mr. Lonely2",
+    "title": "Mr. Lonely",
     "artists": ["MC yakışıklı", "Mert Şakar"],
     "releaseDate": "2022-09-11",
     "duration": "02:23",
