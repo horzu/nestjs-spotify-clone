@@ -5,21 +5,31 @@ GET http://localhost:3000/
 GET http://localhost:3000/songs
 
 ### Fetch one song by id
-GET http://localhost:3000/songs/1
+GET http://localhost:3000/songs/2
 
 ### Create new song
 POST http://localhost:3000/songs/
 Content-Type: application/json
 
 {
-    "title": "Mr. Lonely",
-    "artists": [123123],
+    "title": "Mr. Lonely2",
+    "artists": ["MC yakışıklı", "Mert Şakar"],
     "releaseDate": "2022-09-11",
-    "duration": "02:23"
+    "duration": "02:23",
+    "lyrics": "asdfasdfasdfasdfasdf"
 }
 
 ### Update one song by id
-PUT http://localhost:3000/songs/1
+PUT http://localhost:3000/songs/2
+Content-Type: application/json
+
+{
+    "title": "Mr. Lonely3",
+    "artists": ["MC yakışıklı", "Mert Şakar2"],
+    "releaseDate": "2022-09-11",
+    "duration": "02:23",
+    "lyrics": "asdfasdfasdfasdfasdf"
+}
 
 ### Deşete one song by id
 DELETE  http://localhost:3000/songs/1
