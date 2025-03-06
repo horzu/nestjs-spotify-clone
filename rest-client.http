@@ -12,8 +12,8 @@ POST http://localhost:3000/songs/
 Content-Type: application/json
 
 {
-    "title": "Mr. Lonely",
-    "artists": ["MC yakışıklı", "Mert Şakar"],
+    "title": "You for me",
+    "artists": [1, 2],
     "releaseDate": "2022-09-11",
     "duration": "02:23",
     "lyrics": "asdfasdfasdfasdfasdf"
@@ -33,3 +33,13 @@ Content-Type: application/json
 
 ### Deşete one song by id
 DELETE  http://localhost:3000/songs/1
+
+### Create new playlist
+POST http://localhost:3000/playlists
+Content-Type: application/json
+
+{
+    "name": "playlist1",
+    "songs": [2, 6,7],
+    "user": 1
+}

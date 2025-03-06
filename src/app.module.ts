@@ -7,6 +7,12 @@ import { SongsController } from './songs/songs.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
 import { Song } from './songs/song.entity';
+import { Artist } from './artists/artist.entity';
+import { User } from './users/user.entity';
+import { Playlist } from './playlists/playlist.entity';
+import { PlaylistsController } from './playlists/playlists.controller';
+import { PlaylistsModule } from './playlists/playlists.module';
+import { PlaylistsService } from './playlists/playlists.service';
 
 @Module({
   imports: [
@@ -17,10 +23,11 @@ import { Song } from './songs/song.entity';
       username: 'postgres',
       password: '1266',
       database: 'spotify-clone',
-      entities: [Song],
+      entities: [Song, Artist, User, Playlist],
       synchronize: true,
     }),
     SongsModule,
+    PlaylistsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

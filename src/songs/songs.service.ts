@@ -10,11 +10,14 @@ import {
   PaginateQuery,
   PaginateConfig,
 } from 'nestjs-paginate';
+import { Artist } from 'src/artists/artist.entity';
 
 @Injectable()
 export class SongsService {
   constructor(
     @InjectRepository(Song) private songsRepository: Repository<Song>,
+    @InjectRepository(Artist)
+    private artistsRepository: Repository<Artist>,
   ) {}
 
   async create(songDTO: CreateSongDto): Promise<Song> {
@@ -25,7 +28,10 @@ export class SongsService {
     song.lyrics = songDTO.lyrics;
     song.releaseDate = songDTO.releaseDate;
 
-    return await this.songsRepository.save(song);
+    const artists = await this.artistsRepository.findBy(songDTO.artists);
+    song.artists = artists;
+
+    return this.songsRepository.save(song);
   }
   findAll(): Promise<Song[]> {
     return this.songsRepository.find();
