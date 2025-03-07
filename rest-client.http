@@ -43,3 +43,14 @@ Content-Type: application/json
     "songs": [2, 6,7],
     "user": 1
 }
+
+### Create new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "firstName": "Mert",
+    "lastName": "Şakar",
+    "email": "mertsakar12@hotmail.com",
+    "password": "asdf123"
+}

@@ -13,6 +13,8 @@ import { Playlist } from './playlists/playlist.entity';
 import { PlaylistsController } from './playlists/playlists.controller';
 import { PlaylistsModule } from './playlists/playlists.module';
 import { PlaylistsService } from './playlists/playlists.service';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -22,12 +24,14 @@ import { PlaylistsService } from './playlists/playlists.service';
       port: 5432,
       username: 'postgres',
       password: '1266',
-      database: 'spotify-clone',
+      database: 'spotify-clone-2',
       entities: [Song, Artist, User, Playlist],
       synchronize: true,
     }),
     SongsModule,
     PlaylistsModule,
+    AuthModule,
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
