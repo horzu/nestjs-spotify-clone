@@ -1,5 +1,6 @@
 ### Entry point of api
 GET http://localhost:3000/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbmdhcnJpeEBnbWFpbC5jb20iLCJ1c2VySWQiOjEyLCJhcnRpc3RJZCI6MSwiaWF0IjoxNzQxNTk2OTE5LCJleHAiOjE3NDE2ODMzMTl9.nXnwADMN0iWs1zrnuSfXKxt_A5y2EeV5tIZ8F8V6FtY
 
 ### Fetch all songs
 GET http://localhost:3000/songs
@@ -10,6 +11,7 @@ GET http://localhost:3000/songs/2
 ### Create new song
 POST http://localhost:3000/songs/
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbmdhcnJpeEBnbWFpbC5jb20iLCJ1c2VySWQiOjEyLCJhcnRpc3RJZCI6MSwiaWF0IjoxNzQxNTk2OTE5LCJleHAiOjE3NDE2ODMzMTl9.nXnwADMN0iWs1zrnuSfXKxt_A5y2EeV5tIZ8F8V6FtY
 
 {
     "title": "You for me",
@@ -44,7 +46,7 @@ Content-Type: application/json
     "user": 1
 }
 
-### Create new user
+### User Signup
 POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
@@ -53,4 +55,33 @@ Content-Type: application/json
     "lastName": "Şakar",
     "email": "mertsakar12@hotmail.com",
     "password": "asdf123"
+}
+
+### Artist Signup
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "firstName": "Martin",
+    "lastName": "Garrix",
+    "email": "martingarrix@gmail.com",
+    "password": "123456"
+}
+
+### User Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "mertsakar12@hotmail.com",
+    "password": "asdf123"
+}
+
+### Artist Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "martingarrix@gmail.com",
+    "password": "123456"
 }
