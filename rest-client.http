@@ -33,7 +33,7 @@ Content-Type: application/json
     "lyrics": "asdfasdfasdfasdfasdf"
 }
 
-### Deşete one song by id
+### Delete one song by id
 DELETE  http://localhost:3000/songs/1
 
 ### Create new playlist
@@ -73,8 +73,8 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "mertsakar12@hotmail.com",
-    "password": "asdf123"
+    "email": "martingarrix@gmail.com",
+    "password": "123456"
 }
 
 ### Artist Login
@@ -85,3 +85,20 @@ Content-Type: application/json
     "email": "martingarrix@gmail.com",
     "password": "123456"
 }
+
+### Enable 2FA
+GET http://localhost:3000/auth/enable-2fa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbmdhcnJpeEBnbWFpbC5jb20iLCJ1c2VySWQiOjEyLCJhcnRpc3RJZCI6MSwiaWF0IjoxNzQ0NzIwMzk3LCJleHAiOjE3NDQ4MDY3OTd9.3US72V2lhSbUTNj0US2oddGdd_y8wbHtubV-GdO0AGk
+
+### Validate 2FA
+POST http://localhost:3000/auth/validate-2fa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbmdhcnJpeEBnbWFpbC5jb20iLCJ1c2VySWQiOjEyLCJhcnRpc3RJZCI6MSwiaWF0IjoxNzQ0NzE3MTU1LCJleHAiOjE3NDQ4MDM1NTV9.-UlD0y_AA3UrwuIEoMwf1pxVJL7P-5eA_qVwvCGvR2c
+Content-Type: application/json
+
+{
+    "token": "212719"
+}
+
+### Disable 2FA
+GET http://localhost:3000/auth/disable-2fa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbmdhcnJpeEBnbWFpbC5jb20iLCJ1c2VySWQiOjEyLCJhcnRpc3RJZCI6MSwiaWF0IjoxNzQ0NzE3MTU1LCJleHAiOjE3NDQ4MDM1NTV9.-UlD0y_AA3UrwuIEoMwf1pxVJL7P-5eA_qVwvCGvR2c
