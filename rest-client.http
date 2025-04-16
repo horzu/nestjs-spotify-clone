@@ -52,9 +52,9 @@ Content-Type: application/json
 
 {
     "firstName": "Mert",
-    "lastName": "Şakar",
-    "email": "mertsakar12@hotmail.com",
-    "password": "asdf123"
+    "lastName": "Sakar",
+    "email": "mertsakar2@hotmail.com",
+    "password": "123456"
 }
 
 ### Artist Signup
@@ -102,3 +102,8 @@ Content-Type: application/json
 ### Disable 2FA
 GET http://localhost:3000/auth/disable-2fa
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbmdhcnJpeEBnbWFpbC5jb20iLCJ1c2VySWQiOjEyLCJhcnRpc3RJZCI6MSwiaWF0IjoxNzQ0NzE3MTU1LCJleHAiOjE3NDQ4MDM1NTV9.-UlD0y_AA3UrwuIEoMwf1pxVJL7P-5eA_qVwvCGvR2c
+
+
+### Access profile
+GET http://localhost:3000/auth/profile
+Authorization: Bearer a0434fcb-308f-4267-82fe-f33283c119bc

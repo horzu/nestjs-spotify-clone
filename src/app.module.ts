@@ -25,7 +25,7 @@ import { ArtistsModule } from './artists/artists.module';
       port: 5432,
       username: 'postgres',
       password: '1266',
-      database: 'spotify-clone-2',
+      database: 'spotify_clone_3',
       entities: [Song, Artist, User, Playlist],
       synchronize: true,
     }),

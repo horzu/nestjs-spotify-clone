@@ -99,4 +99,8 @@ export class AuthService {
   async disable2FA(userId: number): Promise<UpdateResult | undefined> {
     return this.userService.disable2FA(userId);
   }
+
+  async validateUserByApiKey(apiKey: string): Promise<User> {
+    return this.userService.findByApiKey(apiKey);
+  }
 }
