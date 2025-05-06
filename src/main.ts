@@ -4,8 +4,10 @@ import { ValidationPipe } from '@nestjs/common';
 import { SeedService } from './seed/seed.service';
 import { ConfigService } from '@nestjs/config';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import * as crypto from 'crypto-browserify';
 
 async function bootstrap() {
+  const generateString = () => crypto.randomUUID();
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
   // const seedService = app.get(SeedService);
