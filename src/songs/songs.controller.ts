@@ -15,7 +15,7 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { SongsService } from './songs.service';
-import { CreateSongDto } from './dto/create-song-dto';
+import { CreateSongDto } from './dto/create-song.dto';
 import { Song } from './song.entity';
 import { DeleteResult, UpdateResult } from 'typeorm';
 import { UpdateSongDto } from './dto/update-song.dto';
@@ -31,7 +31,6 @@ export class SongsController {
     @Body() CreateSongDto: CreateSongDto,
     @Request() request,
   ): Promise<Song> {
-    console.log(request.user);
     return this.songsService.create(CreateSongDto);
   }
   @Get()

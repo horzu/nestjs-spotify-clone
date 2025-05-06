@@ -1,5 +1,5 @@
 import { Body, Injectable } from '@nestjs/common';
-import { CreateSongDto } from './dto/create-song-dto';
+import { CreateSongDto } from './dto/create-song.dto';
 import { Song } from './song.entity';
 import { DeleteResult, Repository, UpdateResult } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';

@@ -1,6 +1,6 @@
 ### Entry point of api
 GET http://localhost:3000/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbmdhcnJpeEBnbWFpbC5jb20iLCJ1c2VySWQiOjEyLCJhcnRpc3RJZCI6MSwiaWF0IjoxNzQxNTk2OTE5LCJleHAiOjE3NDE2ODMzMTl9.nXnwADMN0iWs1zrnuSfXKxt_A5y2EeV5tIZ8F8V6FtY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lcnRzYWthcjRAaG90bWFpbC5jb20iLCJ1c2VySWQiOjUsImlhdCI6MTc0NjUyNzU0MywiZXhwIjoxNzQ2NjEzOTQzfQ.MlW_xCFiTiV4SeyEO8pH8gdCJeYOK2QLy-X2TEccK2M
 
 ### Fetch all songs
 GET http://localhost:3000/songs
@@ -11,11 +11,11 @@ GET http://localhost:3000/songs/2
 ### Create new song
 POST http://localhost:3000/songs/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbmdhcnJpeEBnbWFpbC5jb20iLCJ1c2VySWQiOjEyLCJhcnRpc3RJZCI6MSwiaWF0IjoxNzQxNTk2OTE5LCJleHAiOjE3NDE2ODMzMTl9.nXnwADMN0iWs1zrnuSfXKxt_A5y2EeV5tIZ8F8V6FtY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkphYmFyaV9PSGFyYTc4QGhvdG1haWwuY29tIiwidXNlcklkIjoyLCJhcnRpc3RJZCI6MSwiaWF0IjoxNzQ2NDQ4NzUxLCJleHAiOjE3NDY1MzUxNTF9.GXdrMuL4xkG62m9w8MO9uKIH5IwF1eKoPQd6D9Q-M-w
 
 {
     "title": "You for me",
-    "artists": [1, 2],
+    "artists": [1],
     "releaseDate": "2022-09-11",
     "duration": "02:23",
     "lyrics": "asdfasdfasdfasdfasdf"
@@ -73,7 +73,7 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "martingarrix@gmail.com",
+    "email": "mertsakar4@hotmail.com",
     "password": "123456"
 }
 
@@ -82,7 +82,7 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "martingarrix@gmail.com",
+    "email": "Jabari_OHara78@hotmail.com",
     "password": "123456"
 }
 
