@@ -37,8 +37,5 @@ async function bootstrap() {
 
   const configService = app.get(ConfigService);
   await app.listen(configService.get<number>('port') || 3000);
-  console.log(`Application is running on: ${await app.getUrl()}`);
-  console.log(`Swagger is running on: ${await app.getUrl()}/api`);
-  console.log(process.env.SECRET);
 }
 bootstrap();
