@@ -38,6 +38,8 @@ async function bootstrap() {
   });
 
   const configService = app.get(ConfigService);
-  await app.listen(configService.get<number>('port') || 3000);
+  await app.listen(
+    process.env.PORT || configService.get<number>('port') || 3000,
+  );
 }
 bootstrap();
