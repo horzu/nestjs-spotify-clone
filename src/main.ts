@@ -10,8 +10,8 @@ async function bootstrap() {
   const generateString = () => crypto.randomUUID();
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
-  // const seedService = app.get(SeedService);
-  // await seedService.seed();
+  const seedService = app.get(SeedService);
+  await seedService.seed();
 
   const config = new DocumentBuilder()
     .setTitle('Spotify Clone')
