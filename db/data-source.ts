@@ -23,6 +23,9 @@ export const typeOrmAsyncConfig = {
       entities: [User, Playlist, Artist, Song],
       synchronize: false,
       migrations: ['dist/db/migrations/*.js'],
+      ssl: {
+        rejectUnauthorized: false, // Render SSL için gerekli
+      },
     };
   },
 };
@@ -37,6 +40,9 @@ export const dataSourceOptions: DataSourceOptions = {
   entities: [User, Playlist, Artist, Song],
   synchronize: false,
   migrations: ['dist/db/migrations/*.js'],
+  ssl: {
+    rejectUnauthorized: false, // Render SSL için gerekli
+  },
 };
 
 const dataSource = new DataSource(dataSourceOptions); //4
